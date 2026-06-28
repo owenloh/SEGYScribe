@@ -191,13 +191,12 @@ The main function asks you to choose:
 
 Want to improve AI accuracy for your specific data? You can customize the ontology (attribute definitions) that provides context to the LLM:
 
-**Edit the ontology in `core/utils.py`:**
-```python
-# Add your domain-specific attributes
-SEGY_ATTRIBUTE_ONTOLOGY = {
-    "YOUR_CUSTOM_ATTRIBUTE": {
+**Edit the ontology in `segy_attribute_ontology.json`:**
+```json
+{
+    "your_custom_attribute": {
         "description": "Your specific attribute description",
-        "typical_bytes": [25, 28],  # Common byte locations
+        "typical_bytes": [25, 28],
         "aliases": ["ALT_NAME", "VARIANT_NAME"]
     }
 }
